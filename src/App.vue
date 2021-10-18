@@ -1,23 +1,21 @@
 <template>
-  <div id="app">
-    <Test></Test>
-    <Test2></Test2>
-    <Test3></Test3>
+  <div class="container">
+    <Count>
+    </Count>
   </div>
 </template>
 
 <script>
-import Test from './components/Test'
-import Test2 from './components/Test2'
-import Test3 from './components/Test3'
+import Count from './components/Count'
 export default {
   name: 'App',
-  components: {
-    Test,Test2,Test3
+  components: {Count},
+  data() {
+
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
