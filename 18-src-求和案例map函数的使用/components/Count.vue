@@ -25,12 +25,15 @@ export default {
     }
   },
   computed: {
-    ...mapState('countAbout',['sum']),
-    ...mapGetters('countAbout',['tenSize'])
+    ...mapState(['sum']),
+    ...mapGetters(['tenSize'])
   },
   methods:{
-    ...mapMutations('countAbout',{increment:'ADD',decrement:'SUB'}),
-    ...mapActions('countAbout',{incrementOdd:'addOdd',incrementWait:'addWait'})
+    ...mapMutations({increment:'ADD',decrement:'SUB'}),
+    ...mapActions({incrementOdd:'addOdd',incrementWait:'addWait'})
+  },
+  mounted() {
+    console.log('Count', this)
   }
 }
 </script>
